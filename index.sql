@@ -6,23 +6,14 @@ CREATE TABLE persons (
     city varchar(20) DEFAULT 'Ellenabad',
     orderdate Date DEFAULT CURRENT_DATE(),
 );
-
 INSERT INTO persons (dob, adress)
 VALUES ('01', 'basant vihar')
-
 ALTER TABLE persons (
-    ALTER city DROP DEFAULT;
+        ALTER city DROP DEFAULT;
 )
-
 ALTER TABLE persons (
-    ALTER city SET DEFAULT 'Sirsa'; 
-)
-
-CREATE INDEX personsid 
-ON persons (id);
-
-CREATE UNIQUE INDEX pid
-ON persons (id);
-
-ALTER TABLE persons
-DROP INDEX personsid;
+        ALTER city
+        SET DEFAULT 'Sirsa';
+) CREATE INDEX personsid ON persons (id);
+CREATE UNIQUE INDEX pid ON persons (id);
+ALTER TABLE persons DROP INDEX personsid;

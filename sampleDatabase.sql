@@ -1,9 +1,6 @@
 CREATE DATABASE IF NOT EXISTS allInOne;
-
 USE allInOne;
-
 DROP TABLE IF EXISTS employees;
-
 CREATE TABLE employees (
     employeeNumber INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(255) NOT NULL,
@@ -14,9 +11,7 @@ CREATE TABLE employees (
     reportsTo INT,
     jobTitle VARCHAR(255)
 );
-
 DROP TABLE IF EXISTS customers;
-
 CREATE TABLE customers (
     customerNumber INT AUTO_INCREMENT PRIMARY KEY,
     customerName VARCHAR(255) NOT NULL,
